@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "**10 Reasons to study Software Engineering**#"
-date:       2020-07-19 05:51:46 +0000
+title:      "10 Reasons to study Software Engineering"
+date:       2020-07-19 01:51:47 -0400
 permalink:  10_reasons_to_study_software_engineering
 ---
 
