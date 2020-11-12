@@ -36,9 +36,15 @@ get '/medicines' do
   erb :'medicines/index.html.erb'
 end
 
-Models: The 'logic' of a web application. This is where data is manipulated and/or saved.
+**Models**: The 'logic' of a web application. This is where data is manipulated and/or saved.
 Views: The 'front-end', user-facing part of a web application - this is the only part of the app that the user interacts with directly. Views generally consist of HTML, CSS, and Javascript.
 Controllers: The go-between for models and views. The controller relays data from the browser to the application, and from the application to the browser.
+
+ a single file, **layout**.erb, that contains all of the code we want to exist on every single web page.
+ 
+ In layout.erb, we need to add a **yield** wherever we want the other page content to be loaded:
+
+
 
 
 user relationships, sessions and authentification
