@@ -6,6 +6,41 @@ permalink:  what_to_study_for_project_2_review
 ---
 
 
+Sinatra is a Domain Specific Language implemented in Ruby
+Any application that requires the sinatra library will get access to methods like: get and post. These methods provide the ability to instantly transform a Ruby application into an application that can respond to HTTP requests.
+
+we define a class App and have it inherit from Sinatra::Base. This way, any instance of our class App will have all the functionality of the Sinatra class.
+Inside our class we have a Sinatra method define our controller action. This method responds to a GET request to the root url and displays the text Hello, World! in the browser.
+
+The purpose of config.ru is to detail to Rack the environment requirements of the application and start the application.
+A common 'config.ru' might look like:
+File: config.ru
+require 'sinatra'
+require_relative './app.rb'
+run Application
+config.ru requires a valid Sinatra Controller to run. A Sinatra Controller is simply a Ruby Class that inherits from Sinatra::Base
+
+Controllers define an HTTP method using the sinatra routing DSL provided by methods like get and post. When you enclose these methods within a ruby class that is a Sinatra Controller, these HTTP routes are scoped and attached to the controller.
+
+Routes are the part of an application that connect HTTP requests to a specific method in your application code built to handle responding to such a request (that part of code is called a Controller Action).
+
+ a route is an HTTP method paired with a URL-matching pattern. Each route is associated with a block. The matching route defined in the controller would look like this:
+
+get '/medicines' do
+    # some code to get all the medicines
+	 some code to get all the medicines
+ end
+-----
+get '/medicines' do
+  @medicines = Medicine.all
+  erb :'medicines/index.html.erb'
+end
+
+Models: The 'logic' of a web application. This is where data is manipulated and/or saved.
+Views: The 'front-end', user-facing part of a web application - this is the only part of the app that the user interacts with directly. Views generally consist of HTML, CSS, and Javascript.
+Controllers: The go-between for models and views. The controller relays data from the browser to the application, and from the application to the browser.
+
+
 user relationships, sessions and authentification
 
 Walk through application in browser going over login and basic CRUD
