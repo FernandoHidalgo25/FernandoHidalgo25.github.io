@@ -43,6 +43,29 @@ Controllers: The go-between for models and views. The controller relays data fro
  a single file, **layout**.erb, that contains all of the code we want to exist on every single web page.
  
  In layout.erb, we need to add a **yield** wherever we want the other page content to be loaded:
+ 
+ In web apps, we use **forms** to create **objects**. To create these two different classes of objects, we need to create two models, Student and Course.
+ Our Student class, with name and grade attributes, will look something like this:
+
+class Student
+  attr_reader :name, :grade
+ 
+ @@all = []
+ 
+  def initialize(params)
+    @name = params[:name]
+    @grade = params[:grade]
+    @@all << self
+  end
+ 
+  def self.all
+    @@all
+  end
+ 
+end
+In this model, we have an attr_reader for name and grade
+ 
+ 
 
 
 
