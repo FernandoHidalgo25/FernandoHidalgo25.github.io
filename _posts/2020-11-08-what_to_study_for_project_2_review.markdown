@@ -82,7 +82,9 @@ models-inherited from, has_secure_password, validate, has many and belongs to
 
 DB-folder what are the files for?, what is the schema?, password and digest and the importance of the belongs_to object having a foreign key and user id
 
-config.ru- mounting controllers, use vs run? rack method override, pull up and explain a form and where the form goes and what is done in the route after the form, what is params and how the name on the form is set to the key and the user input is the value
+config.ru- mounting controllers, use vs run? rack method override, pull up and explain a form and where the form goes and what is done in the route after the form, what is **params** 
+A parameter is a key-value pair that is encoded in a HTTP request. There are three kinds of params: user supplied, routing and default
+and how the name on the form is set to the key and the user input is the value
 run vs use in config.ru
 restful routing
 redirect vs erb
@@ -113,29 +115,12 @@ Create
 Read
 Update
 Delete
-trainer = Trainer.create(:username => "Jake", :email => "jake@gmail.com", :password => "123")
-pokemon = Pokemon.create(:name => "Charmander", :pokemon_type => "fire")
-Child does not know who it is until they know who they belong to
-trainer.pokemon << pokemon  to give him the variable of pokemon we just made
-This should give the pokemon an ID
-can use .new then .save
-Trainer.last.update(:username => "Cheese")
-Trainer.find(4).update(:username => "Pasta")
-Trainer.find(4).delete
-Class Trainer
-has_many: pokemon
-Trainer is the parent class and knows their child
-Class Pokemon
-belongs_to: trainer
-Pokemon is the child class and doesn’t know who it belongs to so you let em know by “<<“
+
 Restful routing is a convention to help keep clear naming routes like /signup is to the signup page
 when we call .tap on an Object, we can insert extra operations before any other code executes
 Config.ru is the .exe file
 mapped the to Run app controller or use the other controllers because trainer and pokemon controllers inherit from app con
-[7:49 PM] .
-[7:49 PM] .
-[7:49 PM] .
-[7:49 PM] .when we call .tap on an Object, we can insert extra operations before any other code executes
+
 seed file is dummy data so the app can function
 interpolate
 ActiveRecord can use ruby method sqlite
